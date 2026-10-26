@@ -26,11 +26,11 @@ export default function Tiers() {
             whileHover={{ y: -10, scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             onClick={() => openModal(t.amount || null)}
-            className="glass group relative overflow-hidden p-6 text-center transition-colors hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+            className="glass group relative overflow-hidden p-6 text-center transition-colors hover:border-[#22d3ee]/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)]"
           >
             <div className="relative">
               <div className="text-4xl transition-transform group-hover:rotate-12 group-hover:scale-125">{t.emoji}</div>
-              <div className="mt-3 text-sm uppercase tracking-widest text-[#6e6e73]">{t.label}</div>
+              <div className="mt-3 text-sm uppercase tracking-widest text-slate-400">{t.label}</div>
               <div className="text-ink mt-1 text-2xl font-semibold">{t.amount ? formatRp(t.amount) : "Bebas"}</div>
             </div>
           </motion.button>

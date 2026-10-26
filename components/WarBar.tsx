@@ -14,7 +14,7 @@ export default function WarBar() {
       <h2 className="mb-2 text-center text-3xl font-semibold sm:text-5xl">
         <span className="text-ink">Live War Bar</span>
       </h2>
-      <p className="mb-10 text-center text-[#6e6e73]">
+      <p className="mb-10 text-center text-slate-400">
         {TEAMS[leader].emoji} {TEAMS[leader].name} sedang memimpin!
       </p>
 
@@ -28,22 +28,22 @@ export default function WarBar() {
           </span>
         </div>
 
-        <div className="flex h-10 overflow-hidden rounded-full bg-black/10">
+        <div className="flex h-10 overflow-hidden rounded-full bg-white/10">
           <motion.div
             className="h-full"
-            style={{ background: `${TEAMS.A.color}` }}
+            style={{ background: TEAMS.A.color, boxShadow: `0 0 20px ${TEAMS.A.color}80` }}
             animate={{ width: `${pctA}%` }}
             transition={{ type: "spring", stiffness: 60, damping: 15 }}
           />
           <motion.div
             className="h-full"
-            style={{ background: `${TEAMS.B.color}` }}
+            style={{ background: TEAMS.B.color, boxShadow: `0 0 20px ${TEAMS.B.color}80` }}
             animate={{ width: `${pctB}%` }}
             transition={{ type: "spring", stiffness: 60, damping: 15 }}
           />
         </div>
 
-        <div className="mt-4 flex justify-between text-sm text-[#6e6e73] sm:text-base">
+        <div className="mt-4 flex justify-between text-sm text-slate-400 sm:text-base">
           <span>{formatRp(totals.A)}</span>
           <span>{formatRp(totals.B)}</span>
         </div>

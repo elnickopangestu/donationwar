@@ -10,10 +10,13 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center px-5 py-20 text-center">
 
+      <div className="pointer-events-none absolute left-1/4 top-24 h-72 w-72 rounded-full bg-teamA/20 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-24 right-1/4 h-72 w-72 rounded-full bg-teamB/20 blur-3xl" />
+
       <motion.span
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="glass mb-6 rounded-full px-5 py-2 text-sm tracking-widest text-[#6e6e73]"
+        className="glass mb-6 rounded-full px-5 py-2 text-sm tracking-widest text-slate-400"
       >
         🔥 KOMPETISI DONASI ANTAR KOMUNITAS
       </motion.span>
@@ -33,7 +36,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="mt-6 text-xl text-[#6e6e73] sm:text-3xl"
+        className="mt-6 text-xl text-slate-400 sm:text-3xl"
       >
         Siapa Paling Dermawan?
       </motion.p>
@@ -56,8 +59,8 @@ export default function Hero() {
       </motion.div>
 
       <div className="mt-10">
-        <p className="flex items-center justify-center gap-2 text-sm uppercase tracking-widest text-[#6e6e73]">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-[#34c759]" /> Total terkumpul (live)
+        <p className="flex items-center justify-center gap-2 text-sm uppercase tracking-widest text-slate-400">
+          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" /> Total terkumpul (live)
         </p>
         <p className="text-ink mt-2 text-4xl font-semibold sm:text-6xl">
           <Counter value={totals.all} />
@@ -74,7 +77,7 @@ export default function Hero() {
 function TeamCard({ id, amount }: { id: TeamId; amount: number }) {
   const t = TEAMS[id];
   return (
-    <div className="glass w-full p-5 sm:w-64" style={{ boxShadow: "0 2px 16px rgba(0,0,0,0.06)" }}>
+    <div className="glass w-full p-5 sm:w-64" style={{ boxShadow: `0 0 36px ${t.color}33` }}>
       <div className="text-4xl">{t.emoji}</div>
       <div className="mt-1 font-bold" style={{ color: t.color }}>
         {t.name}

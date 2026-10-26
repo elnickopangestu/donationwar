@@ -25,10 +25,10 @@ export default function HowItWorks() {
             whileHover={{ y: -8 }}
             className="glass relative p-8 text-center"
           >
-            <span className="absolute right-5 top-4 text-5xl font-semibold text-black/5">{i + 1}</span>
+            <span className="absolute right-5 top-4 text-5xl font-semibold text-white/5">{i + 1}</span>
             <div className="text-5xl">{s.icon}</div>
             <h3 className="mt-4 text-xl font-bold">{s.title}</h3>
-            <p className="mt-2 text-[#6e6e73]">{s.desc}</p>
+            <p className="mt-2 text-slate-400">{s.desc}</p>
           </motion.div>
         ))}
       </div>

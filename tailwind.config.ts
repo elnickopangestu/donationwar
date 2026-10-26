@@ -5,9 +5,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#1d1d1f",
-        teamA: "#ff9500",
-        teamB: "#5856d6",
+        ink: "#f5f5fa",
+        teamA: "#ff8a1f",
+        teamB: "#818cf8",
       },
       keyframes: {
         float: {

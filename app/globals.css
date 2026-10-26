@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html {
@@ -12,23 +12,25 @@ html {
 }
 
 body {
-  background: #f5f5f7;
-  color: #1d1d1f;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Inter, Arial, sans-serif;
-  letter-spacing: -0.011em;
+  background: #07090f;
+  color: #f5f5fa;
+  background-image:
+    radial-gradient(50rem 32rem at 8% -8%, rgba(255, 138, 31, 0.14), transparent 60%),
+    radial-gradient(50rem 32rem at 100% 5%, rgba(129, 140, 248, 0.14), transparent 60%);
+  background-attachment: fixed;
 }
 
 @layer components {
   .glass {
-    @apply rounded-3xl bg-white shadow-[0_2px_16px_rgba(0,0,0,0.06)];
+    @apply rounded-3xl border border-white/10 bg-white/[0.04] shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-xl;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-[#0071e3] px-8 py-4 font-medium text-white transition hover:bg-[#0077ed] active:scale-95;
+    @apply inline-flex items-center justify-center rounded-full bg-[#22d3ee] px-8 py-4 font-semibold text-[#04121a] shadow-[0_0_32px_rgba(34,211,238,0.35)] transition hover:scale-105 hover:shadow-[0_0_44px_rgba(34,211,238,0.55)] active:scale-95;
   }
   .section {
     @apply mx-auto w-full max-w-6xl px-5 py-20;
   }
   .input {
-    @apply w-full rounded-xl border border-transparent bg-[#f5f5f7] px-4 py-3 text-[#1d1d1f] outline-none transition placeholder:text-[#86868b] focus:border-[#0071e3] focus:bg-white;
+    @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[#22d3ee] focus:shadow-[0_0_0_3px_rgba(34,211,238,0.15)];
   }
 }

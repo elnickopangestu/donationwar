@@ -13,8 +13,8 @@ export interface Donor {
 }
 
 export const TEAMS: Record<TeamId, { name: string; emoji: string; color: string }> = {
-  A: { name: "Team Persija", emoji: "🌌", color: "#ff9500" },
-  B: { name: "Team Persita", emoji: "🌸", color: "#5856d6" },
+  A: { name: "Team Persija", emoji: "🌌", color: "#ff8a1f" },
+  B: { name: "Team Persita", emoji: "🌸", color: "#818cf8" },
 };
 
 export const formatRp = (n: number) => "Rp " + n.toLocaleString("id-ID");
