@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const STEPS = [
-  { icon: "🛡️", title: "Pilih Tim", desc: "Tentukan komunitasmu: Team Persija atau Team Persib." },
+  { icon: "🛡️", title: "Pilih Tim", desc: "Tentukan komunitasmu: Team Persija atau Team Persita." },
   { icon: "💸", title: "Donasi", desc: "Pilih nominal donasi favoritmu dan kirim dukungan." },
   { icon: "🏆", title: "Menangkan War", desc: "Donasimu menambah poin tim. Tim dengan donasi terbanyak menang!" },
 ];
