@@ -39,20 +39,20 @@ export default function DonateModal() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={closeModal}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4 backdrop-blur-sm"
         >
           <motion.div
             initial={{ scale: 0.9, y: 30, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.9, y: 30, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="glass max-h-[92vh] w-full max-w-md overflow-y-auto bg-[#12091f]/90 p-6 sm:p-8"
+            className="glass max-h-[92vh] w-full max-w-md overflow-y-auto bg-white/90 p-6 sm:p-8"
           >
             {done ? (
               <div className="py-8 text-center">
                 <div className="text-6xl">🎉</div>
-                <h3 className="text-gradient mt-4 text-2xl font-black">Terima kasih!</h3>
-                <p className="mt-2 text-violet-200">Donasimu sudah masuk ke {TEAMS[team].name}.</p>
+                <h3 className="text-ink mt-4 text-2xl font-semibold">Terima kasih!</h3>
+                <p className="mt-2 text-[#6e6e73]">Donasimu sudah masuk ke {TEAMS[team].name}.</p>
                 <button onClick={closeModal} className="btn-primary mt-6">
                   Tutup
                 </button>
@@ -60,8 +60,8 @@ export default function DonateModal() {
             ) : (
               <form onSubmit={submit} className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-black">Donasi Sekarang</h3>
-                  <button type="button" onClick={closeModal} aria-label="Tutup" className="text-2xl text-violet-300">
+                  <h3 className="text-2xl font-semibold">Donasi Sekarang</h3>
+                  <button type="button" onClick={closeModal} aria-label="Tutup" className="text-2xl text-[#6e6e73]">
                     ×
                   </button>
                 </div>
@@ -79,8 +79,8 @@ export default function DonateModal() {
                         onClick={() => setTeam(id)}
                         className="rounded-2xl border p-3 text-sm font-bold transition"
                         style={{
-                          borderColor: team === id ? TEAMS[id].color : "rgba(255,255,255,0.1)",
-                          background: team === id ? TEAMS[id].color + "33" : "transparent",
+                          borderColor: team === id ? TEAMS[id].color : "rgba(0,0,0,0.08)",
+                          background: team === id ? TEAMS[id].color + "1a" : "transparent",
                         }}
                       >
                         {TEAMS[id].emoji} {TEAMS[id].name}
@@ -113,7 +113,7 @@ export default function DonateModal() {
                 </Field>
 
                 <button disabled={!valid} className="btn-primary w-full disabled:opacity-40 disabled:hover:scale-100">
-                  Kirim Donasi 💜
+                  Kirim Donasi
                 </button>
               </form>
             )}
@@ -127,7 +127,7 @@ export default function DonateModal() {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-sm text-violet-300">{label}</span>
+      <span className="mb-2 block text-sm text-[#6e6e73]">{label}</span>
       {children}
     </label>
   );

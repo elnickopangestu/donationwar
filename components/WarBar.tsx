@@ -11,10 +11,10 @@ export default function WarBar() {
 
   return (
     <section id="war" className="section">
-      <h2 className="mb-2 text-center text-3xl font-black sm:text-5xl">
-        <span className="text-gradient">Live War Bar</span>
+      <h2 className="mb-2 text-center text-3xl font-semibold sm:text-5xl">
+        <span className="text-ink">Live War Bar</span>
       </h2>
-      <p className="mb-10 text-center text-violet-300">
+      <p className="mb-10 text-center text-[#6e6e73]">
         {TEAMS[leader].emoji} {TEAMS[leader].name} sedang memimpin!
       </p>
 
@@ -28,22 +28,22 @@ export default function WarBar() {
           </span>
         </div>
 
-        <div className="flex h-10 overflow-hidden rounded-full bg-white/10">
+        <div className="flex h-10 overflow-hidden rounded-full bg-black/10">
           <motion.div
             className="h-full"
-            style={{ background: `linear-gradient(90deg, #6d28d9, ${TEAMS.A.color})` }}
+            style={{ background: `${TEAMS.A.color}` }}
             animate={{ width: `${pctA}%` }}
             transition={{ type: "spring", stiffness: 60, damping: 15 }}
           />
           <motion.div
             className="h-full"
-            style={{ background: `linear-gradient(90deg, ${TEAMS.B.color}, #be185d)` }}
+            style={{ background: `${TEAMS.B.color}` }}
             animate={{ width: `${pctB}%` }}
             transition={{ type: "spring", stiffness: 60, damping: 15 }}
           />
         </div>
 
-        <div className="mt-4 flex justify-between text-sm text-violet-200 sm:text-base">
+        <div className="mt-4 flex justify-between text-sm text-[#6e6e73] sm:text-base">
           <span>{formatRp(totals.A)}</span>
           <span>{formatRp(totals.B)}</span>
         </div>

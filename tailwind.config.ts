@@ -5,12 +5,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#07050f",
-        teamA: "#8b5cf6",
-        teamB: "#ec4899",
-      },
-      backgroundImage: {
-        "brand-gradient": "linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)",
+        ink: "#1d1d1f",
+        teamA: "#ff9500",
+        teamB: "#5856d6",
       },
       keyframes: {
         float: {
